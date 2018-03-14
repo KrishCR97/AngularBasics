@@ -5,23 +5,27 @@ import { Component } from '@angular/core';
     styleUrls : ['./user.component.css']
 })
 export class UserComponent{
-//properties
-firstName : String
-lastName : String
-age : Number
-address
-//
+
+user : User
+
 constructor(){
-    this.firstName = "Kishon"
-    this.lastName = "Kumar"
-    this.age = 24
-    this.address = {
-        street : 'Any Street',
-        city : 'Any city',
-        State : 'Any state'
-    }
+    
+    this.user.firstName ="Kishon"
+    this.user.lastName = "Kumar"
+    this.user.age = 11
+    this.user.address.street = "My street"
+    this.user.address.State = "My state"
+
 }
-showAge(){
-    return this.age
+
 }
+interface User {
+        firstName : String 
+        lastName : String
+        age : Number
+        address : {
+            street : String,
+            city : String,
+            State : String
+        }
 }
